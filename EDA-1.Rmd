@@ -1,0 +1,132 @@
+---
+title: "EDA-Heart"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+date: "2022-09-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+getwd()
+```
+
+```{r}
+df=read.csv('heart.csv')
+```
+
+```{r}
+head(df)
+```
+
+```{r}
+tail(df)
+```
+
+```{r}
+df[1]
+```
+
+```{r}
+df[-1]
+```
+
+```{r}
+df[1:3]
+```
+
+```{r}
+df[1:5]
+```
+
+```{r}
+df[c(1, 3, 4, 8)]
+```
+
+```{r}
+class(df)
+```
+
+```{r}
+str(df)
+```
+
+```{r}
+df[2,]
+```
+
+```{r}
+df[,3]
+```
+
+```{r}
+df[3,1]
+```
+
+```{r}
+summary(df)
+```
+
+```{r}
+names(df)
+```
+
+```{r}
+row.names(df)
+```
+
+```{r}
+colnames(df)
+```
+
+```{r}
+dimnames(df)
+```
+
+```{r}
+df[df$age >= 50 &
++ df$cp == 3 &
++ df$chol >= 250,]
+```
+
+```{r}
+df[df$age >= 50 &
++ df$cp <= 1 &
++ df$chol >= 250,]
+```
+
+```{r}
+df[df$age >= 50 &
++ df$cp <= 1 &
++ df$chol >= 300,]
+```
+
+```{r}
+
+```
+
